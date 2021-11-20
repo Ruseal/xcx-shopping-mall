@@ -1,0 +1,113 @@
+.detail swiper {
+  height: 70vw;
+  text-align: center;
+}
+.detail swiper image {
+  width: 60%;
+}
+.detail .price {
+  font-size: 32rpx;
+  font-weight: 600;
+  padding-left: 10rpx;
+  color: var(--themeColor);
+}
+.detail .title {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.detail .title .name {
+  flex: 5;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  border-top: 10rpx solid #ffffff;
+  border-bottom: 10rpx solid #ffffff;
+}
+.detail .title .star {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #adadad;
+}
+.detail .title .star image {
+  width: 38rpx;
+}
+.detail .title .star .size {
+  font-size: 22rpx;
+}
+.detail .introduce {
+  padding-bottom: 80rpx;
+}
+.detail .introduce .name {
+  font-size: 36rpx;
+  font-weight: 600;
+  padding: 16rpx 10rpx;
+  color: var(--themeColor);
+  border-top: 14rpx solid #f0f0f0;
+  border-bottom: 18rpx solid #f0f0f0;
+}
+.detail .bottom {
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80rpx;
+  position: fixed;
+  background-color: #fff;
+  border-top: 1px solid #dddddd;
+}
+.detail .bottom .contact,
+.detail .bottom .share,
+.detail .bottom .cart {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.detail .bottom .contact image,
+.detail .bottom .share image,
+.detail .bottom .cart image {
+  width: 36rpx;
+}
+.detail .bottom .contact .font,
+.detail .bottom .share .font,
+.detail .bottom .cart .font {
+  font-size: 20rpx;
+}
+.detail .bottom .contact .button,
+.detail .bottom .share .button,
+.detail .bottom .cart .button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.detail .bottom .add-cart,
+.detail .bottom .buy {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+.detail .bottom .add-cart {
+  background-color: #f7a52b;
+  color: white;
+}
+.detail .bottom .buy {
+  background-color: #f72424;
+  color: white;
+}

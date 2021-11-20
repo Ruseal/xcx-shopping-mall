@@ -1,0 +1,128 @@
+.detail {
+  swiper {
+    height    : 70vw;
+    text-align: center;
+
+    image {
+      width: 60%;
+    }
+  }
+
+  .price {
+    font-size   : 32rpx;
+    font-weight : 600;
+    padding-left: 10rpx;
+    color       : var(--themeColor);
+  }
+
+  .title {
+    display      : flex;
+    align-items  : center;
+    border-top   : 1px solid rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(240, 240, 240);
+
+    .name {
+      flex              : 5;
+      font-size         : 30rpx;
+      padding           : 0 10rpx;
+      overflow          : hidden;
+      text-overflow     : ellipsis;
+      display           : -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      border-top        : 10rpx solid rgb(255, 255, 255);
+      border-bottom     : 10rpx solid rgb(255, 255, 255);
+    }
+
+    .star {
+      flex           : 1;
+      display        : flex;
+      flex-direction : column;
+      justify-content: center;
+      align-items    : center;
+      border-left    : 1px solid rgb(173, 173, 173);
+
+      image {
+        width: 38rpx;
+      }
+
+      .size {
+        font-size: 22rpx;
+      }
+    }
+  }
+
+  .introduce {
+    padding-bottom: 80rpx;
+
+    .name {
+      font-size    : 36rpx;
+      font-weight  : 600;
+      padding      : 16rpx 10rpx;
+      color        : var(--themeColor);
+      border-top   : 14rpx solid rgb(240, 240, 240);
+      border-bottom: 18rpx solid rgb(240, 240, 240);
+
+    }
+  }
+
+  .bottom {
+    display         : flex;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    height          : 80rpx;
+    position        : fixed;
+    background-color: #fff;
+    border-top      : 1px solid rgb(221, 221, 221);
+
+    .contact,
+    .share,
+    .cart {
+      position       : relative;
+      flex           : 1;
+      display        : flex;
+      flex-direction : column;
+      justify-content: center;
+      align-items    : center;
+      width          : 100%;
+
+      image {
+        width: 36rpx;
+      }
+
+      .font {
+        font-size: 20rpx;
+      }
+
+      .button {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        width   : 100%;
+        height  : 100%;
+        opacity : 0;
+
+      }
+    }
+
+    .add-cart,
+    .buy {
+      flex           : 2;
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      font-size      : 24rpx;
+    }
+
+    .add-cart {
+      background-color: rgb(247, 165, 43);
+      color           : white;
+    }
+
+    .buy {
+      background-color: rgb(247, 36, 36);
+      color           : white;
+    }
+  }
+}

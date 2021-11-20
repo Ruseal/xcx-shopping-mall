@@ -1,0 +1,40 @@
+<view class="detail">
+  <swiper indicator-dots autoplay circular>
+    <swiper-item bindtap="previewImage" data-url="{{item.pics_mid}}" wx:for="{{detailObj.pics}}" wx:key="pics_id">
+      <image src="{{item.pics_mid}}" mode="widthFix" />
+    </swiper-item>
+  </swiper>
+  <view class="price">￥{{detailObj.goods_price}}</view>
+  <view class="title">
+    <view class="name">{{detailObj.goods_name}}</view>
+    <view class="star">
+      <image class="icon" src="../../acssts/image/detail/star.png" mode="widthFix" />
+      <view class="size">收藏</view>
+    </view>
+  </view>
+  <view class="introduce">
+    <view class="name">图文详情</view>
+    <view class="container">
+      <rich-text nodes="{{detailObj.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="contact">
+      <image src="../../acssts/image/detail/kf.png" mode="widthFix" />
+      <view class="font">联系客服</view>
+      <button open-type="contact" class="button"></button>
+    </view>
+    <view class="share">
+      <image src="../../acssts/image/detail/share.png" mode="widthFix" />
+      <view class="font">分享</view>
+      <button open-type="share" class="button"></button>
+    </view>
+    <navigator url="../cart/index" open-type="switchTab" class="cart">
+      <image src="../../acssts/image/detail/cart.png" mode="widthFix" />
+      <view class="font">购物车</view>
+      <button class="button"></button>
+    </navigator>
+    <view class="add-cart" bindtap="addCart">加入购物车</view>
+    <view class="buy">立即购买</view> 
+  </view>
+</view>
