@@ -1,0 +1,17 @@
+<view class="goods-list">
+  <SearchInput></SearchInput>
+  <Tabs class="tabs" tabs="{{tabs}}">
+    <view class="container">
+      <view class="list-item" wx:for="{{goodsList}}" wx:key="goods_id">
+        <navigator url="../detail/detail?goods_id={{item.goods_id}}">
+          <image src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" mode="widthFix" />
+          <view class="text">
+            <view class="title">{{item.goods_name}}</view>
+            <view class="price">￥{{item.goods_price}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view class="not-more">{{hasNotMore?'没有更多了':'加载中...'}}</view>
+    </view>
+  </Tabs>
+</view>
