@@ -1,0 +1,41 @@
+.cate {
+  height: 100vh;
+}
+.cate .cate-container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cate .cate-container .left-scroll {
+  flex: 2;
+}
+.cate .cate-container .left-scroll .left-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+}
+.cate .cate-container .left-scroll .active {
+  color: var(--themeColor);
+}
+.cate .cate-container .right-scroll {
+  flex: 5;
+}
+.cate .cate-container .right-scroll .goods-wrapper .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.cate .cate-container .right-scroll .goods-wrapper .goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cate .cate-container .right-scroll .goods-wrapper .goods-list navigator {
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 30rpx;
+}
+.cate .cate-container .right-scroll .goods-wrapper .goods-list navigator image {
+  width: 100%;
+}

@@ -1,0 +1,48 @@
+.cate {
+  height: 100vh;
+
+  .cate-container {
+    height : calc(100vh - 90rpx);
+    display: flex; 
+
+    .left-scroll {
+      flex: 2;
+
+      .left-menu-item {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        height         : 90rpx;
+      }
+      .active{
+        color:var(--themeColor)
+      }
+
+    }
+
+    .right-scroll {
+      flex: 5;
+      .goods-wrapper{
+        .title{
+          height: 80rpx;
+          line-height: 80rpx;
+          text-align: center;
+          font-size: 35rpx;
+          font-weight: 600;
+        } 
+        .goods-list{
+          display: flex; 
+          flex-wrap: wrap;
+          navigator{
+            width: calc(100% / 3);
+            text-align: center;
+            padding: 30rpx;
+            image{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
