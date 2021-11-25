@@ -1,0 +1,110 @@
+.cart .cart-top {
+  border-bottom: 1px solid #cccccc;
+}
+.cart .cart-top .address {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+.goods {
+  padding-bottom: 90rpx;
+}
+.goods .title {
+  font-size: 34rpx;
+  color: red;
+  padding: 14rpx 20rpx;
+  border-top: 6rpx solid #f71c1c;
+  border-bottom: 5rpx solid #f71c1c;
+}
+.goods .cart-list .cart-list-item {
+  display: flex;
+  height: 240rpx;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #bdbdbd;
+}
+.goods .cart-list .cart-list-item .image {
+  flex: 2;
+  padding: 0 40rpx;
+}
+.goods .cart-list .cart-list-item .image navigator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.goods .cart-list .cart-list-item .image navigator image {
+  width: 100%;
+}
+.goods .cart-list .cart-list-item .info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods .cart-list .cart-list-item .info .info-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods .cart-list .cart-list-item .info .info-buttomm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods .cart-list .cart-list-item .info .info-buttomm .price {
+  font-size: 36rpx;
+  color: red;
+}
+.goods .cart-list .cart-list-item .info .info-buttomm .num {
+  display: flex;
+}
+.goods .cart-list .cart-list-item .info .info-buttomm .num .count {
+  margin: 0 15rpx;
+}
+.goods .cart-empty {
+  width: 100%;
+  height: calc(100vh - 195rpx - 90rpx);
+  background-color: #f6f6f6;
+}
+.goods .cart-empty image {
+  width: 100%;
+}
+.order {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #ffffff;
+  border-top: 1px solid #e7e7e7;
+}
+.order .total {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 10rpx;
+}
+.order .total .price {
+  display: flex;
+  align-items: center;
+}
+.order .total .price view {
+  margin-left: 14rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: red;
+}
+.order .settlement {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: white;
+  background-color: var(--themeColor);
+}

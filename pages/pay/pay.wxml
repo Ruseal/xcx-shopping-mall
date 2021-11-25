@@ -1,0 +1,46 @@
+<view class="cart">
+  <view class="cart-top">
+    <view class="address">
+      <view class="left">
+        <view class="name">收货人:{{address.userName}}</view>
+        <view class="text">{{address.joinAddress}}</view>
+      </view>
+      <view class="phone">{{address.telNumber}}</view>
+    </view>
+  </view>
+  <view class="goods">
+    <view class="title">购物车</view>
+    <view class="cart-list" wx:if="{{cart.length}}">
+      <view class="cart-list-item" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="image">
+          <navigator url="../detail/detail?goods_id={{item.goods_id}}">
+            <image src="{{item.goods_small_logo}}" mode="widthFix" />
+          </navigator>
+        </view>
+        <view class="info">
+          <view class="info-text">{{item.goods_name}}</view>
+          <view class="info-buttomm">
+            <view class="price">￥{{item.goods_price}}</view>
+            <view class="num">
+              <view class="count">X{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart-empty" wx:else>
+      <image src="../../acssts/image/cart/cart_empty.jpeg" mode="widthFix" />
+    </view>
+  </view>
+  <view class="order">
+    <view class="select"></view>
+    <view class="total">
+      <view class="price">
+        合计:
+        <view>￥ {{totalPrice}}</view>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <view class="settlement" bind:tap="handlePay">支付({{totalCount}})</view>
+  </view>
+</view>
