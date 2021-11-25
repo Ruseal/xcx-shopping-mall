@@ -1,0 +1,65 @@
+<view class="cart">
+  <view class="cart-top">
+    <view class="get-address" wx:if="{{!address.userName}}">
+      <button bind:tap="handleAddress" type="primary" plain>获取收货地址</button>
+    </view>
+    <view class="address" wx:else>
+      <view class="left">
+        <view class="name">收货人:{{address.userName}}</view>
+        <view class="text">{{address.joinAddress}}</view>
+      </view>
+      <view class="phone">{{address.telNumber}}</view>
+    </view>
+  </view>
+  <view class="goods">
+    <view class="title">购物车</view>
+    <view class="cart-list" wx:if="{{cart.length}}">
+      <view class="cart-list-item" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="check-wrapper">
+          <checkbox-group bindchange="handleGoodsCekChange" data-id="{{item.goods_id}}">
+            <checkbox checked="{{item.isChecked}}"></checkbox>
+          </checkbox-group>
+        </view>
+        <view class="image">
+          <navigator url="../detail/detail?goods_id={{item.goods_id}}">
+            <image src="{{item.goods_small_logo}}" mode="widthFix" />
+          </navigator>
+        </view>
+        <view class="info">
+          <view class="info-text">{{item.goods_name}}</view>
+          <view class="info-buttomm">
+            <view class="price">￥{{item.goods_price}}</view>
+            <view class="num">
+              <view class="sub" bind:tap="handleGoodsCount" data-count="{{-1}}" data-id="{{item.goods_id}}">
+                -
+              </view>
+              <view class="count">{{item.num}}</view>
+              <view class="add" bind:tap="handleGoodsCount" data-count="{{1}}" data-id="{{item.goods_id}}">
+                +
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart-empty" wx:else>
+      <image src="../../acssts/image/cart/cart_empty.jpeg" mode="widthFix" />
+    </view>
+  </view>
+  <view class="order">
+    <view class="select">
+      <checkbox-group bindchange="handleSelectChange">
+        <checkbox checked="{{selectAll}}"></checkbox>
+      </checkbox-group>
+      <view class="all-name">全选</view>
+    </view>
+    <view class="total">
+      <view class="price">
+        合计:
+        <view>￥ {{totalPrice}}</view>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <view class="settlement" bind:tap="handleGoodsTotal">结算({{totalCount}})</view>
+  </view>
+</view>
