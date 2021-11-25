@@ -16,10 +16,7 @@ Component({
   data: {
     currentIndex: 0
   },
-
-  /**
-   * 组件的方法列表
-   */
+ 
   methods: {
     toggleTab(e) {
       const { index } = e.target.dataset

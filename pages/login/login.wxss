@@ -1,0 +1,8 @@
+.login-wrap {
+  padding-top: 70vh;
+}
+.login-wrap .login,
+.login-wrap .exit {
+  margin-bottom: 20rpx;
+  width: 90%;
+}

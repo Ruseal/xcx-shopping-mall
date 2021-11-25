@@ -3,7 +3,7 @@
   <view class="swiper-wrapper">
     <swiper indicator-dots autoplay circular>
       <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator>
+        <navigator url="../detail/detail?goods_id={{item.goods_id}}">
           <image src="{{item.image_src}}" mode="widthFix" />
         </navigator>
       </swiper-item>
@@ -26,4 +26,4 @@
       </view>
     </view>
   </view>
-</view> 
+</view>

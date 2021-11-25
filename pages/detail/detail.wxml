@@ -7,8 +7,8 @@
   <view class="price">￥{{detailObj.goods_price}}</view>
   <view class="title">
     <view class="name">{{detailObj.goods_name}}</view>
-    <view class="star">
-      <image class="icon" src="../../acssts/image/detail/star.png" mode="widthFix" />
+    <view class="star" bind:tap="handleChangeCollect">
+      <image src="{{isCollect?'../../acssts/image/detail/star_active.png':'../../acssts/image/detail/star.png'}}" class="icon" mode="widthFix" />
       <view class="size">收藏</view>
     </view>
   </view>
@@ -35,6 +35,6 @@
       <button class="button"></button>
     </navigator>
     <view class="add-cart" bindtap="addCart">加入购物车</view>
-    <view class="buy">立即购买</view> 
+    <view class="buy">立即购买</view>
   </view>
 </view>

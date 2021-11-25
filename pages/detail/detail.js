@@ -6,13 +6,18 @@ Page({
    */
   data: {
     detailObj: {},
+    isCollect: false
   },
   detailInfo: {},
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.getDeatil(options.goods_id)
+  async onShow() {
+    const pages = getCurrentPages();
+    let { goods_id } = pages[pages.length - 1].options
+    await this.getDeatil(goods_id)
+    const collect = wx.getStorageSync('collect') || []
+    let isCollect = collect.some(item => item.goods_id === this.detailInfo.goods_id)
+    this.setData({
+      isCollect
+    })
   },
   async getDeatil(goods_id) {
     const res = await request({ url: '/goods/detail', data: { goods_id } })
@@ -36,6 +41,7 @@ Page({
     let index = cartInfo.findIndex(item => item.goods_id === this.detailInfo.goods_id)
     if (index === -1) {
       this.detailInfo.num = 1
+      this.detailInfo.isChecked = true
       cartInfo.push(this.detailInfo)
     } else {
       cartInfo[index].num++
@@ -44,8 +50,33 @@ Page({
     wx.showToast({
       title: '加入购物车成功',
       icon: 'success',
-      mssk: true
+      mask: true
     })
+  },
+  handleChangeCollect() {
+    const userInfo = wx.getStorageSync('user-info') || {}
+    if (!Object.keys(userInfo).length) {
+      wx.navigateTo({
+        url: '../login/login',
+      })
+      return
+    }
+    const collect = wx.getStorageSync('collect') || []
+    const index = collect.findIndex(item => item.goods_id === this.detailInfo.goods_id)
+    if (index !== -1) {
+      collect.splice(index, 1)
+      this.setData({
+        isCollect: false
+      })
+      wx.setStorageSync('collect', collect)
+      return
+    }
+    collect.push(this.detailInfo)
+    this.setData({
+      isCollect: true
+    })
+    wx.setStorageSync('collect', collect)
+
   }
 
 })

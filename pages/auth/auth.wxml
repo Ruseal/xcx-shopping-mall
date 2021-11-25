@@ -1,0 +1,1 @@
+<button type="primary" plain open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取支付权限</button>

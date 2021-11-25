@@ -1,0 +1,4 @@
+<view class="login-wrap">
+  <button class="login" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权并登入</button>
+  <button class="exit" type="primary" bind:tap="exit" plain="{{true}}">取消</button>
+</view>

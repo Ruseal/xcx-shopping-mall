@@ -5,7 +5,13 @@
     "pages/cart/index",
     "pages/my/index",
     "pages/goods_list/goods_list",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/pay/pay",
+    "pages/auth/auth",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/collect/collect",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
