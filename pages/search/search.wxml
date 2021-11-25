@@ -1,0 +1,11 @@
+<view class="search">
+  <view class="search-wrap">
+    <input type="text" placeholder="搜索" placeholder-style="text-align:center" bindinput="handleChange" value="{{value}}"/>
+    <view hidden="{{isCancel}}" bindtap="handleTap" class="cancel">取消</view>
+  </view>
+  <view class="container">
+    <navigator class="list-item" wx:for="{{goods}}" wx:key="goods_id" url="">
+      {{item.goods_name}}
+    </navigator>
+  </view> 
+</view>

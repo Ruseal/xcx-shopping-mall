@@ -1,0 +1,38 @@
+page {
+  background-color: #e0e0e0;
+}
+.search .search-wrap {
+  height: 100rpx;
+  display: flex;
+  justify-content: sp;
+  align-items: center;
+}
+.search .search-wrap input {
+  flex: 5;
+  margin: 0 8rpx 0 15rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  background-color: #ffffff;
+}
+.search .search-wrap .cancel {
+  flex: 1;
+  margin: 0 15rpx 0 8rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 20rpx;
+  background-color: #eeeeee;
+}
+.search .container {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.search .container .list-item {
+  padding: 20rpx 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid #d6d6d6;
+}
