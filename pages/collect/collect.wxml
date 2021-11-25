@@ -1,0 +1,22 @@
+<view class="order">
+  <Tabs class="tabs" tabs="{{tabs}}">
+    <view class="order-list">
+      <view class="cart-list-item" wx:for="{{collect}}" wx:key="goods_id">
+        <view class="image">
+          <navigator url="../detail/detail?goods_id={{item.goods_id}}">
+            <image src="{{item.goods_small_logo}}" mode="widthFix" />
+          </navigator>
+        </view>
+        <view class="info">
+          <view class="info-text">{{item.goods_name}}</view>
+          <view class="info-buttomm">
+            <view class="price">￥{{item.goods_price}}</view>
+            <view class="num">
+              <!-- <view class="count">X{{item.num}}</view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </Tabs>
+</view>
