@@ -1,0 +1,104 @@
+.user {
+  background-color: #eee7e7;
+}
+.user .userbgc-wrap {
+  position: relative;
+  height: 45vh;
+  background-color: #f76565;
+}
+.user .userbgc-wrap .bgc {
+  height: 50vh;
+  filter: blur(5px);
+}
+.user .userbgc-wrap .login-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user .userbgc-wrap .avatar-wrap {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user .userbgc-wrap .avatar-wrap .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  object-fit: cover;
+  border-radius: 75rpx;
+}
+.user .userbgc-wrap .avatar-wrap .name {
+  margin-top: 60rpx;
+  color: white;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.user .container {
+  position: relative;
+  width: 95vw;
+  height: 800rpx;
+  margin: -60rpx auto;
+}
+.user .container .record {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+.user .container .record .record-item {
+  flex: 1;
+  text-align: center;
+}
+.user .container .record .record-item .count {
+  color: var(--themeColor);
+}
+.user .container .order {
+  margin-top: 20rpx;
+  height: 210rpx;
+  background-color: #ffffff;
+}
+.user .container .order .title {
+  font-size: 32rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #c0c0c0;
+}
+.user .container .order .order-list {
+  display: flex;
+}
+.user .container .order .order-list navigator {
+  flex: 1;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.user .container .order .order-list navigator image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.user .container .address {
+  margin: 35rpx 0 20rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  background-color: #ffffff;
+}
+.user .container .cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+.user .container .exit {
+  margin-top: 20rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: red;
+  background-color: #fff;
+}

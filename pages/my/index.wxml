@@ -1,0 +1,45 @@
+<view class="user">
+  <view class="userbgc-wrap">
+    <block wx:if="{{userInfo.avatarUrl}}">
+      <image class="bgc" src="../../acssts/image/user/avatar.jpeg" mode="widthFix" />
+      <view class="avatar-wrap">
+        <image class="avatar" src="../../acssts/image/user/avatar.jpeg" mode="scaleToFill" />
+        <view class="name">按机答诶和</view>
+      </view>
+    </block>
+    <block wx:else>
+      <button class="login-button" bind:tap="toLogin" type="primary" size="default">登入</button>
+    </block>
+  </view>
+  <view class="container">
+    <view class="record">
+      <navigator class="record-item" url="../collect/collect?type={{index+1}}" wx:for="{{collectList}}" wx:key="*this">
+        <view class="count">{{index===1?collectCount:0}}</view>
+        <view class="name">{{item}}</view>
+      </navigator>
+    </view>
+    <view class="order">
+      <view class="title">我的订单</view>
+      <view class="order-list">
+        <navigator wx:for="{{orderList}}" wx:key="index" url="../order/order?type={{index+1}}">
+          <image src="{{item.icon}}" mode="scaleToFill" />
+          <view class="name">{{item.name}}</view>
+        </navigator>
+      </view>
+      <view class="address">收货地址管理</view>
+      <view class="cell">
+        <view class="left">联系客服</view>
+        <view class="right">45647846</view>
+      </view>
+      <view class="cell">
+        <view class="left">联系客服</view>
+        <view class="right">45647846</view>
+      </view>
+      <view class="cell">
+        <view class="left">联系客服</view>
+        <view class="right">45647846</view>
+      </view>
+      <view class="exit" bind:tap="exitLogin">退出登入</view>
+    </view>
+  </view>
+</view>
