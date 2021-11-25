@@ -1,0 +1,17 @@
+.order .tabs .order-list .list-item {
+  padding: 16rpx;
+  border-bottom: 1px solid #d6d6d6;
+}
+.order .tabs .order-list .list-item .cell {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+.order .tabs .order-list .list-item .num .value {
+  color: #6e6e6e;
+}
+.order .tabs .order-list .list-item .price .value {
+  color: var(--themeColor);
+  font-size: 34rpx;
+  font-weight: 600;
+}

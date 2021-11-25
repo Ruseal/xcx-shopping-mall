@@ -1,0 +1,20 @@
+<view class="order">
+  <Tabs class="tabs" tabs="{{tabs}}">
+    <view class="order-list">
+      <view class="list-item" wx:for="{{order}}" wx:key="serial_number">
+        <view class="cell num">
+          <view class="name">订单编号</view>
+          <view class="value">{{item.serial_number}}</view>
+        </view>
+        <view class="cell price">
+          <view class="name">订单价格</view>
+          <view class="value">￥{{item.order_price}}</view>
+        </view>
+        <view class="cell date">
+          <view class="name">订单日期</view>
+          <view class="value">{{item.create_time}}</view>
+        </view>
+      </view>
+    </view>
+  </Tabs>
+</view>
